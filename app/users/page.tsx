@@ -6,8 +6,7 @@ import { Users } from '../types/userTypes'
 const UsersPage = async () => {
 
   const res = await fetch(
-    "https://jsonplaceholder.typicode.com/users",
-    { next: { revalidate: 10 }}
+    "https://jsonplaceholder.typicode.com/users"
   );
   const users: Users[] = await res.json();
 
